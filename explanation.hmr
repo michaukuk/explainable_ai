@@ -1,0 +1,34 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TYPES DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+xtype [
+name:x1,
+base:numeric,
+domain : [-100000 to 100000]].
+xtype [
+name:x2,
+base:numeric,
+domain : [-100000 to 100000]].
+xtype [
+name:class,
+base:symbolic,
+domain : [0,1]].
+
+%%%%%%%%%%%%%%%%%%%%%%%%% ATTRIBUTES DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%
+xattr [ name: x1,
+type:x1,
+ class:simple,
+ comm:out ].
+xattr [ name: x2,
+type:x2,
+ class:simple,
+ comm:out ].
+xattr [ name: class,
+type:class,
+ class:simple,
+ comm:out ].
+
+%%%%%%%%%%%%%%%%%%%%%%%% TABLE SCHEMAS DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%
+ xschm tree : [x1,x2]==> [class].
+xrule tree/0:
+[x1  gte -2.04,x2  gte 1.54] ==> [class set 0]. # 0.6
+

@@ -1,0 +1,12 @@
+digraph mediationTree{
+303563356[label="x2
+",shape=box, color=black]303563356->135721597[label=">=-3.80
+conf=1.0"]
+135721597[label="x1
+",shape=box, color=black]135721597->1044036744[label=">=-12.95
+conf=1.0"]
+1044036744[label="class
+1[0.14]
+0[0.86]
+",shape=box, color=red]
+}
